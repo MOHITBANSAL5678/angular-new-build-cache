@@ -1,7 +1,7 @@
 
-# CHANGE  public isNewVersionAvailable: Boolean = FALSE;  FOR WORKNIG SOLUTION 
+## CHANGE  public isNewVersionAvailable: Boolean = FALSE;  FOR WORKNIG SOLUTION 
 
-## Reload applciation on new version  avalible solution 
+# Reload applciation on new version  avalible solution 
 
 # Problem :  ‘How can we be sure the users use the latest version of the site?”
 So what are going to do about?:    
