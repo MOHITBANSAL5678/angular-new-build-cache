@@ -1,5 +1,5 @@
 
-## CHANGE  public isNewVersionAvailable: Boolean = FALSE;  FOR WORKNIG SOLUTION 
+# Change  public isNewVersionAvailable: Boolean = FALSE;  FOR WORKNIG SOLUTION 
 
 # Reload applciation on new version  avalible solution 
 
