@@ -1,6 +1,6 @@
 
 Problem :  ‘How can we be sure the users use the latest version of the site?”
-So what are going to do about?:
+So what are going to do about?:    
 1.	We’ll hash our file names each build so we know when they have changed
 2.	We’ll create version.json in our dist folder which holds the current build hash and also enter the current build hash into the code itself.
 3.	We’ll make frontend poll the version.json every X minutes to check if the hash has changed compared to it’s “inner” hash.
