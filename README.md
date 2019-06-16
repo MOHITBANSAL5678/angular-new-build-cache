@@ -1,4 +1,7 @@
 
+CHANGE  public isNewVersionAvailable: Boolean = FALSE;  FOR WORKNIG SOLUTION 
+
+
 Problem :  ‘How can we be sure the users use the latest version of the site?”
 So what are going to do about?:    
 1.	We’ll hash our file names each build so we know when they have changed
