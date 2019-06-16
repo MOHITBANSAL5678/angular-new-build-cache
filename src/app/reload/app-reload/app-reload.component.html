@@ -1,0 +1,2 @@
+<button type="button" *ngIf="appReloadService.isNewVersionAvailable " class="reload-btn reload-btn-warning reload-btn-alert"
+  [ngClass]="{'reload-btn-alert': appReloadService.isAlert}" title="Reload for latest Application version" (click)="reload()">Reload</button>

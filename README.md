@@ -1,27 +1,24 @@
-# CacheAlert
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+Problem :  ‘How can we be sure the users use the latest version of the site?”
+So what are going to do about?:
+1.	We’ll hash our file names each build so we know when they have changed
+2.	We’ll create version.json in our dist folder which holds the current build hash and also enter the current build hash into the code itself.
+3.	We’ll make frontend poll the version.json every X minutes to check if the hash has changed compared to it’s “inner” hash.
+4.	If it has, we’ll reload the client either forcefully or gracefully by giving a pop-up / other kind of notification about the new version.
 
-## Development server
+Need to import Reload module and configuration in app.component.html and all Done 😊
+ 
+Step to Solve :
+1. Create Angular 4 project with angular-cli .
+2. with ng build --prod and you’ll get bunch of files in your /dist/ folder, one of them being /dist/main.somehash.bundle.js 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+ 
+3. Next, I’ve created a /build/post-build.js file. post-build is just a script in our package.json:"post-build": "node ./build/post-build.js"
+ 
+ 
+4. After running this script, you should have version.json in the /dist/folder with something like:
+ 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+That’s it. Now, whenever you do a deploy, the hash will change in the version.json and users will be notified after they have polled the version file. 
+ 
