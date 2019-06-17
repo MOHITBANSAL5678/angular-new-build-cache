@@ -1,9 +1,9 @@
 
-## Change  public isNewVersionAvailable: Boolean = FALSE;  FOR WORKNIG SOLUTION 
+### Change  public isNewVersionAvailable: Boolean = FALSE;  FOR WORKNIG SOLUTION 
 
-## Reload applciation on new version  avalible solution 
+### Reload applciation on new version  avalible solution 
 
-### Problem :  ‘How can we be sure the users use the latest version of the site?”
+#### Problem :  ‘How can we be sure the users use the latest version of the site?”
 So what are going to do about?:    
 1.	We’ll hash our file names each build so we know when they have changed
 2.	We’ll create version.json in our dist folder which holds the current build hash and also enter the current build hash into the code itself.
